@@ -191,8 +191,7 @@ class MainActivity2 : AppCompatActivity() {
     //caracteres.
     private fun validarNombreEntrenador(texto: String) {
         var contieneVocal = contieneVocales(texto)
-        var cumpleLongitud = texto.length <= 25
-        if(contieneVocal && cumpleLongitud){
+        if(contieneVocal && texto.length <= 25){
             binding.tilNombreEntrenador.error = null //Borra el mensaje de error si lo hubiera de antes
             esNombreEntrenadorValido = true
         }else{

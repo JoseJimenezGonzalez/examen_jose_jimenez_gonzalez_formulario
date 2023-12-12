@@ -15,11 +15,12 @@ class MainActivity3 : AppCompatActivity() {
         binding = ActivityMain3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Me traigo los datos de la otra actividad
-        val nomprePokemon = intent.getStringExtra("nombre")
+        // Me traigo los datos de la otra actividad
+        val nombrePokemon = intent.getStringExtra("nombre")
         val tipoPokemon = intent.getStringExtra("tipo")
         val estaturaPokemon = intent.getStringExtra("estatura")
 
-        binding.tvListaPokemons.text = "Nombre: " + nomprePokemon + "\n" + "Tipo: " + tipoPokemon + "\n" + "Estatura pokemon: " + estaturaPokemon + "\n\n\n"
+        // Añade los datos al TextView
+        binding.tvListaPokemons.text = "Nombre: $nombrePokemon\nTipo: $tipoPokemon\nEstatura pokemon: $estaturaPokemon\n\n\n"
     }
 }
